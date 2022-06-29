@@ -6,12 +6,14 @@
     <input [(ngModel)]="model.name" type="text" id="name" name="name" required placeholder="name">
     <br>
     <label for="">Age:</label>
-    <input [(ngModel)]="model.name" type="text" id="age" name="age" required placeholder="age">
+    <input [(ngModel)]="model.age" type="text" id="age" name="age" required placeholder="age">
     <br>
     <label for="role">Role:</label>
-    <select name="role" id="role" [(ngModel)]="model.role" placeholder="role">
-      <option *ngFor="let role of roles" value="role">{{role}}</option>
+    <select name="role" id="role" [(ngModel)]="model.role">
+      <option *ngFor="let role of roles" [value]="role">{{role}}</option>
     </select>
     <button type="submit">submit</button>
   </form>
 </div>
+
+<p>{{this.model|json}}</p>
