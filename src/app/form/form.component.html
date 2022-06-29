@@ -1,5 +1,14 @@
-<h1>Form</h1>
-
+<h1>
+  <a rel="noopener"
+    href="https://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/"
+    target="_blank">Template-driven
+    forms
+  </a> - подход, в котором ключевую роль играет шаблон компонента, и
+  всё описание
+  производиться в
+  нём
+</h1>
+<hr>
 <div class="center">
   <form class="column" action="">
     <div>
@@ -20,10 +29,11 @@
     <br>
     <label for="role">Role:</label>
     <select name="role" id="role" [(ngModel)]="model.role">
+      <option disabled>Choose a role</option>
       <option *ngFor="let role of roles" [value]="role">{{role}}</option>
     </select>
+    <br>
+    <p>{{this.model|json}}</p>
     <button type="submit">submit</button>
   </form>
 </div>
-
-<p>{{this.model|json}}</p>
