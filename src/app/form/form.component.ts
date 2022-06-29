@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  roles: string[] = ["guest", "moderator", "administrator"]
+
   constructor() { }
 
   ngOnInit(): void {
