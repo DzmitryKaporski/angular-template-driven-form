@@ -24,6 +24,6 @@ button {
   border: solid 1px green;
 }
 
-.ng-invalid {
+form .ng-invalid {
   border: solid 1px red;
 }
