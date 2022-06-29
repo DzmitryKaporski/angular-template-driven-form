@@ -4,6 +4,6 @@
   flex-direction: column;
 }
 
-input {
+input, select {
   margin: 1rem;
 }
