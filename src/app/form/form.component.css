@@ -20,10 +20,19 @@ button {
   flex-direction: column;
 }
 
-.ng-valid {
-  border: solid 1px green;
+form .ng-valid {
+  border: none;
+  border-bottom: solid 1px green;
+  outline: none;
 }
 
 form .ng-invalid {
-  border: solid 1px red;
+  border: none;
+  border-bottom: solid 1px red;
+  outline: none;
+}
+
+.required {
+  padding-left: 1rem;
+  color: red;
 }

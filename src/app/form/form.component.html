@@ -2,11 +2,21 @@
 
 <div class="center">
   <form class="column" action="">
-    <label for="">Name:</label>
-    <input [(ngModel)]="model.name" type="text" id="name" name="name" required placeholder="name">
+    <div>
+      <label for="">Name:</label>
+      <span *ngIf="name.invalid && name.dirty || name.touched">
+        <span *ngIf="name.errors?.['required']" class="required">name required</span>
+        <span *ngIf="name.errors?.['minlength']" class="required">min length 3 symbol</span>
+      </span>
+    </div>
+    <input #name="ngModel" [(ngModel)]="model.name" type="text" id="name" name="name" minlength="3" maxlength="10"
+      required placeholder="name">
     <br>
-    <label for="">Age:</label>
-    <input [(ngModel)]="model.age" type="text" id="age" name="age" required placeholder="age">
+    <div>
+      <label for="">Age:</label>
+      <span *ngIf="age.invalid && age.dirty" class="required">age required</span>
+    </div>
+    <input #age="ngModel" [(ngModel)]="model.age" type="number" id="age" name="age" required placeholder="age">
     <br>
     <label for="role">Role:</label>
     <select name="role" id="role" [(ngModel)]="model.role">
