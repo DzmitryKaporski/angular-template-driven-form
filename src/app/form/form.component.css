@@ -7,3 +7,11 @@
 input, select {
   margin: 1rem;
 }
+
+button {
+  margin-top: 3rem;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0 10px 0 red;
+  border-radius: 1rem;
+}
