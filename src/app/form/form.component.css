@@ -1,7 +1,5 @@
-.column {
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
+form {
+  padding: 2rem;
 }
 
 input, select {
@@ -14,4 +12,18 @@ button {
   border: none;
   box-shadow: 0 0 10px 0 red;
   border-radius: 1rem;
+}
+
+.column {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ng-valid {
+  border: solid 1px green;
+}
+
+.ng-invalid {
+  border: solid 1px red;
 }
